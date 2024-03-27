@@ -1,26 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid gray;
+  font-family: "Roboto", sans-serif;
+  /* border: 1px solid gray; */
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 250px 1fr;
   /* grid-template-rows: 1fr 5fr; */
-  grid-template-rows: 25dvh 75dvh;
+  /* grid-template-rows: auto auto; */
+  grid-template-rows: 150px 5fr;
   grid-template-areas:
     "sidebar header"
     "sidebar main";
+  row-gap: 20px;
 }
 
 .sidebar-cont {
+  background-color: #1992d4;
+  color: white;
+  font-weight: bolder;
+  padding: 20px;
   grid-area: sidebar;
   display: grid;
   /* grid-template-columns: 1fr; */
   grid-template-rows: auto auto auto;
-  row-gap: 20px;
+  row-gap: 50px;
   align-content: start;
 }
 
@@ -35,36 +44,46 @@
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 2fr;
   align-items: center;
+  column-gap: 10px;
+  row-gap: 30px;
+  padding: 20px;
 }
 
 .profile-acc {
   display: flex;
   gap: 20px;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .files {
   display: flex;
   justify-content: space-around;
+  gap: 10px;
 }
 
 .greeting {
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr auto;
+  grid-template-columns: auto 5fr;
+  grid-template-rows: auto auto;
   grid-template-areas:
     "icon hi"
     "icon name";
-  gap: 5px;
+  row-gap: 5px;
+  column-gap: 20px;
 }
 
 .pic {
   grid-area: icon;
+  width: 70px;
 }
 
 .main-cont {
+  background-color: #e2e8f0;
   display: grid;
   grid-template-columns: 2.5fr 1fr;
+  padding: 20px;
+  gap: 20px;
 }
 
 .announcements-cont {
@@ -72,49 +91,176 @@
   gap: 20px;
 }
 
-.announcements {
+.announcements, .trending-cont {
   display: grid;
-  gap: 5px;
+  gap: 10px;
 }
 
 .cont-box {
+  background-color: white;
   display: grid;
   gap: 10px;
+  border-radius: 10px;
+  padding: 25px;
+  /* margin-right: 20px; */
 }
 
 .trend-box {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "pic un"
     "pic title";
-  gap: 5px;
+  row-gap: 5px;
+  column-gap: 15px;
+  /* align-items: center; */
 }
 
 .pic-trend {
   grid-area: pic;
+  width: 40px;
 }
 
 .trending {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    /* margin-right: 20px; */
   display: grid;
-  gap: 5px;
+  gap: 20px;
 }
 
 .proj-controls {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   justify-content: flex-end;
 }
 
-/* .project {
-    display: grid;
-    align-content: space-between;
-} */
+.project {
+  background-color: white;
+  border-left: 7.5px solid #f0b429;
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  align-content: space-between;
+  gap: 25px;
+  /* box-shadow: ; */
+}
 
 .projects-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   /* grid-auto-rows: 1fr; */
-  gap: 15px;
+  gap: 20px;
+  /* padding: 20px; */
+  margin-top: 10px;
+}
+
+button {
+  background-color: #1992d4;
+  color: white;
+  font-weight: bolder;
+  width: 75px;
+  height: 35px;
+  border: none;
+  border-radius: 25px;
+}
+
+.branding,
+.nav-elem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 45px;
+}
+
+.text {
+  font-size: 19px;
+  margin: 5px 0 5px 5px;
+}
+
+.dashboard {
+  font-size: 25px;
+}
+
+.white-icon {
+  width: 22px;
+  margin: 0 5px 0 10px;
+}
+
+.search-cont {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  background-color: #e2e8f0;
+  border: none;
+  min-width: 200px;
+  border-radius: 15px;
+  height: 30px;
+}
+
+.pic-icon {
+  width: 40px;
+}
+
+.heading,
+.greet,
+.username {
+  font-weight: bolder;
+}
+
+.greet {
+  align-self: flex-end;
+}
+
+.heading {
+  font-size: 1.2em;
+}
+
+.proj-name {
+  font-weight: bolder;
+  color: #46494d;
+}
+
+.proj-details {
+  color: #65696d;
+  font-size: 0.9em;
+}
+
+.proj-icon {
+  width: 20px;
+}
+
+.sub-heading {
+  font-size: 0.8em;
+  font-weight: bolder;
+  color: #46494d;
+}
+
+.detail {
+  font-size: 0.7em;
+  color: #65696d;
+}
+
+.trend-sn, .trend-title {
+    font-size: 0.75em;
+}
+
+.trend-title {
+    color: #65696d;
+}
+
+.trend-sn {
+    align-self: flex-end;
+}
+
+.projects-cont {
+
 }
