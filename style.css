@@ -261,6 +261,6 @@ input {
     align-self: flex-end;
 }
 
-.projects-cont {
-
+.project, .cont-box, .trending {
+    box-shadow: 5px 5px 10px rgb(161, 159, 159);
 }
