@@ -277,6 +277,7 @@ input {
 .projects-cont {
   display: flex;
   flex-direction: column;
+  max-width: 1050px;
 }
 
 .nav-elem {
